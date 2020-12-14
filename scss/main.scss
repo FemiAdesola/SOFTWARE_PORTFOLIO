@@ -47,6 +47,10 @@ header {
   color: $secondary-color;
 }
 
+.text-tertiary {
+  color: $tertiary-color;
+}
+
 main {
   padding: 4rem;
   // Details about height
@@ -75,19 +79,19 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "graimage designer designer"
+    "profileimage profile profile profile"
     "job1 job2 job3 job4";
   grid-template-columns: repeat(4, 1fr);
 
-  .gra-image {
-    grid-area: graimage;
+  .profile-image {
+    grid-area: profileimage;
     margin: auto;
     border-radius: 50%;
     border: $secondary-color 3px solid;
   }
 
-  .designer {
-    grid-area: designer;
+  .profile {
+    grid-area: profile;
     font-size: 1.5rem;
   }
 
@@ -101,22 +105,67 @@ main {
   .job-3 {
     grid-area: job3;
   }
+
   .job-4 {
     grid-area: job4;
   }
 
   .job {
+    border-top: $secondary-color 5px solid;
     background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
+    padding: 0.5 rem;
+    margin: center;
+    border-bottom: $secondary-color 3px solid;
   }
+}
+
+// My education stuff
+.educations {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: 3px rgb(24, 219, 56) solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+//Button styles
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-light {
+  @extend.btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+.btn-dark {
+  @extend.btn;
+  background: darken($primary-color, 50);
+  color: #008000;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
+  color: ser-text-color($primary-color);
   height: 60px;
 }
 

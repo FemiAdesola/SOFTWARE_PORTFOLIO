@@ -143,6 +143,9 @@ header {
 .text-secondary {
   color: #eece1a; }
 
+.text-tertiary {
+  color: darkgreen; }
+
 main {
   padding: 4rem;
   min-height: calc(100vh-60px); }
@@ -161,15 +164,15 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "graimage designer designer" "job1 job2 job3 job4";
+  grid-template-areas: "profileimage profile profile profile" "job1 job2 job3 job4";
   grid-template-columns: repeat(4, 1fr); }
-  .about-info .gra-image {
-    grid-area: graimage;
+  .about-info .profile-image {
+    grid-area: profileimage;
     margin: auto;
     border-radius: 50%;
     border: #eece1a 3px solid; }
-  .about-info .designer {
-    grid-area: designer;
+  .about-info .profile {
+    grid-area: profile;
     font-size: 1.5rem; }
   .about-info .job-1 {
     grid-area: job1; }
@@ -180,16 +183,55 @@ main {
   .about-info .job-4 {
     grid-area: job4; }
   .about-info .job {
+    border-top: #eece1a 5px solid;
     background: #515151;
-    padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    padding: 0.5 rem;
+    margin: center;
+    border-bottom: #eece1a 3px solid; }
+
+.educations {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .educations img {
+    width: 100%;
+    border: 3px #18db38 solid; }
+    .educations img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-light:hover, .btn-dark:hover {
+    background: #eece1a;
+    color: black; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+
+.btn-dark {
+  background: black;
+  color: #008000; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
-  color: white;
+  color: ser-text-color(#444);
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .educations {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .educations {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -218,9 +260,13 @@ main {
       width: 300px;
       height: 300px; }
   .about-info {
-    grid-template-areas: "graimage" "designer" "job1" "job2" "job3" "job4";
-    grid-template-columns: 1fr; } }
+    grid-template-areas: "profileimage" "profile" "job1" "job2" "job3" "job4";
+    grid-template-columns: 1fr; }
+  .educations {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .educations {
+    grid-template-columns: 1fr; } }
