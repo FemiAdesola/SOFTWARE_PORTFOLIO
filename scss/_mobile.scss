@@ -65,6 +65,20 @@
   .educations {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .about-skill {
+    grid-template-areas:
+      "skill1"
+      "skill2"
+      "skill3"
+      "skill4"
+      "skill5"
+      "skill6";
+    grid-template-columns: 1fr;
+  }
+  .publication {
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
@@ -73,6 +87,9 @@
     margin-top: 10vh;
   }
   .educations {
+    grid-template-columns: 1fr;
+  }
+  .skill {
     grid-template-columns: 1fr;
   }
 }
