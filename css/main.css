@@ -91,6 +91,9 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
 * {
   box-sizing: border-box; }
 
@@ -243,6 +246,8 @@ main {
     grid-area: skill4; }
   .about-skill .skill-5 {
     grid-area: skill5; }
+ .about-skill .skill-6 {
+    grid-area: skill6; }
   .about-skill .skill {
     background: #515151;
     padding: 1rem;
@@ -284,18 +289,18 @@ main {
   padding: 1rem;
   margin-top: 10rem;
   background: #2b2b2b;
-  color: ser-text-color(#444);
+  color: set-text-color(#444);
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
   .educations {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
+@media screen and (min-width: 761px) and (max-width: 1170px) {
   .educations {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   main {
     align-items: center;
     text-align: center; }
@@ -332,7 +337,7 @@ main {
   .publication {
     grid-template-columns: 1fr; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   main#home h1 {
     margin-top: 10vh; }
   .educations {
